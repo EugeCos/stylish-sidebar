@@ -1,1 +1,1 @@
-export { default as StylishSidebar } from "components/Sidebar"
+export { default as StylishSidebar } from "./components/Sidebar"
