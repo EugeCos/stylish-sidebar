@@ -2,6 +2,7 @@ import React, { useState, useEffect, useLayoutEffect, forwardRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Global, css } from '@emotion/core';
 import styled from '@emotion/styled';
+import './style.css';
 
 
 const StylishSidebar = forwardRef((props, ref) => {
@@ -228,11 +229,9 @@ const StylishSidebar = forwardRef((props, ref) => {
     <>
       <Global
         styles={css`
-          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
           body {
             margin: 0;
             padding: 0;
-            font-family: 'Poppins';
             h1,h2,h3,h4,h5,h6,p { margin: 0 };
           }
         `}
