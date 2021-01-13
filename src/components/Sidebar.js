@@ -12,8 +12,8 @@ const StylishSidebar = forwardRef((props, ref) => {
       shortName: 'SS'
     },
     menuItems = [
-      {name: 'Item1', to: '/item1', icon: 'https://icon-library.com/images/white-home-icon-png/white-home-icon-png-21.jpg', subMenuItems: [] },
-      {name: 'Item2', to: '/item2', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/White_plane_icon.svg/1024px-White_plane_icon.svg.png', 
+      {name: 'Item1', to: '/item1', icon: 'https://eugeville.files.wordpress.com/2015/03/home.png', subMenuItems: [] },
+      {name: 'Item2', to: '/item2', icon: 'https://eugeville.files.wordpress.com/2015/03/plane.png', 
         subMenuItems: [
           { name: 'Sub1', to: '/sub1'},
           { name: 'Sub2', to: '/sub2'}, 
@@ -228,6 +228,7 @@ const StylishSidebar = forwardRef((props, ref) => {
     <>
       <Global
         styles={css`
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
           body {
             margin: 0;
             padding: 0;

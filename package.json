@@ -17,11 +17,7 @@
   "author": "",
   "license": "ISC",
   "peerDependencies": {
-    "@emotion/core": "^10.x",
-    "@emotion/styled": "^10.x",
     "babel-loader": "^8.x",
-    "node-sass": "^4.x",
-    "framer-motion": "^3.x",
     "react": "^16.x",
     "react-dom": "^16.x"
   },
@@ -29,13 +25,9 @@
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
-    "@emotion/core": "^10.0.35",
-    "@emotion/styled": "^10.0.27",
     "babel-loader": "^8.2.2",
     "babel-plugin-emotion": "^11.0.0",
     "babel-plugin-module-resolver": "^4.1.0",
-    "framer-motion": "^3.2.1",
-    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-styleguidist": "^11.1.5",
@@ -48,5 +40,10 @@
     "rollup-plugin-uglify": "^6.0.4",
     "webpack": "^5.12.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@emotion/core": "^10.0.35",
+    "@emotion/styled": "^10.0.27",
+    "framer-motion": "^3.2.1",
+    "node-sass": "^4.14.1"
+  }
 }
