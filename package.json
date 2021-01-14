@@ -1,6 +1,6 @@
 {
   "name": "stylish-sidebar",
-  "version": "1.1",
+  "version": "1.1.0",
   "description": "Reusable React sidebar",
   "main": "lib/index.js",
   "browser": "lib/index.umd.js",
@@ -16,6 +16,11 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.x",
+    "react-dom": "^16.x",
+    "babel-loader": "^8.x"
+  },
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
