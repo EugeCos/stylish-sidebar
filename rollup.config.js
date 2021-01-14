@@ -6,7 +6,7 @@ import { terser } from "rollup-plugin-terser";
 import { uglify } from "rollup-plugin-uglify";
 import packageJSON from "./package.json";
 
-const input = "./src/index.js";
+const input = "./src/components/Sidebar.js";
 const minifyExtension = pathToFile => pathToFile.replace(/\.js$/, ".min.js");
 
 export default [
@@ -51,7 +51,7 @@ export default [
       file: packageJSON.browser,
       format: "umd",
       sourcemap: true,
-      name: "reactSampleComponentsLibrary",
+      name: "Stylish-Sidebar",
       globals: {
         react: "React",
         "@emotion/styled": "styled",
@@ -74,7 +74,7 @@ export default [
       file: minifyExtension(packageJSON.browser),
       format: "umd",
       sourcemap: true,
-      name: "reactSampleComponentsLibrary",
+      name: "Stylish-Sidebar",
       globals: {
         react: "React",
         "@emotion/styled": "styled",
