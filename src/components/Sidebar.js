@@ -6,10 +6,18 @@ import styled from '@emotion/styled';
 
 const StylishSidebar = forwardRef((props, ref) => {
   const { 
-    backgroundImage = 'https://eugeville.files.wordpress.com/2015/03/mount.jpg', 
+    backgroundImage = 'https://eugeville.files.wordpress.com/2015/03/mount.jpg',
+    useImageAsHeader = false,
     header = {
       fullName: 'Your Sidebar',
       shortName: 'SS'
+    },
+    headerImage = {
+      urlExpanded: '',
+      urlCollapsed: '',
+      heightExpanded: '30pt',
+      heightCollapsed: '22pt',
+      align: 'center'
     },
     menuItems = [
       {name: 'Item1', to: '/item1', icon: 'https://eugeville.files.wordpress.com/2015/03/home.png', subMenuItems: [] },
@@ -248,13 +256,24 @@ const StylishSidebar = forwardRef((props, ref) => {
         ref={ref}
         style={{...className}}
       >
-          <SidebarHeader 
+        {useImageAsHeader ? (
+          <SidebarHeaderImageContainer 
+            height={isSidebarOpen ? headerImage.heightExpanded : headerImage.heightCollapsed}
+            align={isSidebarOpen ? headerImage.align : 'center'}
+            hasHeaderClick={!!onHeaderClick}
+            isSidebarOpen={isSidebarOpen}
+          >
+            <SidebarHeaderImage src={isSidebarOpen ? headerImage.urlExpanded : headerImage.urlCollapsed} />
+          </SidebarHeaderImageContainer>
+        ) : (
+          <SidebarHeaderText 
             font={fonts.header}
             hasHeaderClick={!!onHeaderClick}
             onClick={() => handleHeaderClick()}
-          >{headerState}
-          </SidebarHeader>
-
+          >
+            {headerState}
+          </SidebarHeaderText>
+        )}
           <MenuItemContainer>{menuItemsJSX}</MenuItemContainer>
 
           {showToggler && (
@@ -364,7 +383,7 @@ const SidebarContainer = styled.div`
   transition: .2s ease-in all;
 `
 
-const SidebarHeader = styled.h3`
+const SidebarHeaderText = styled.h3`
   padding: 20px 0;
   text-align: center;
   margin-bottom: 10px;
@@ -372,6 +391,17 @@ const SidebarHeader = styled.h3`
   font-family: ${p => p.font};
   font-weight: 300;
   ${p => p.hasHeaderClick && 'cursor: pointer'}
+`
+
+const SidebarHeaderImageContainer = styled.div`
+  ${p => p.hasHeaderClick && 'cursor: pointer'};
+  padding: ${p => p.isSidebarOpen ? '10px 20px 22px' : '10px 0'};
+  text-align: ${p => p.align || 'center'};
+  height: ${p => p.height || '30pt'};
+`
+
+const SidebarHeaderImage = styled.img`
+  height: inherit
 `
 
 const MenuItemContainer = styled.div``;
