@@ -89,6 +89,6 @@ If you have questions or are interested in a customized Stylish Sidebar for your
 Created by [@EugeCos][1] sometime in 2020
 
 [1]: https://github.com/EugeCos
-[2]: https://sidebar.studio/
+[2]: [https://sidebar.studio/](https://stylish-sidebar.com/)
 [3]: https://github.com/EugeCos/stylish-sidebar/blob/master/license
 [4]: https://eugeville.com/you-used-to-call-me-on-my-cell-phone
