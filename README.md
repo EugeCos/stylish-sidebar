@@ -80,15 +80,8 @@ headerImage | `object` | `{ urlExpanded: '', urlCollapsed: '', heightExpanded: '
 
 This project is licensed under the terms of the [MIT license][3].
 
-
-## Community
-
-Get help or stay up to date.</br>
-If you have questions or are interested in a customized Stylish Sidebar for your project, [feel free to reach out][4].
-
 Created by [@EugeCos][1] sometime in 2020
 
 [1]: https://github.com/EugeCos
-[2]: [https://sidebar.studio/](https://stylish-sidebar.com/)
+[2]: https://stylish-sidebar.com
 [3]: https://github.com/EugeCos/stylish-sidebar/blob/master/license
-[4]: https://eugeville.com/you-used-to-call-me-on-my-cell-phone
